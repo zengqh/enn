@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<material>
+	<tex_diff value="guard1_face.tga" />
+	<en_lit value="true" />
+</material>

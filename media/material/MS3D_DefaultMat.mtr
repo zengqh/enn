@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<material>
+	<tex_diff value="Hex.png" />
+	<tex_normal value="Hex_Normal.png" />
+	<clr_diffuse value="0.6 0.6 0.6 1" />
+	<clr_specular_shiness value="0.6 0.6 0.6 12" />
+	<en_lit value="true" />
+</material>

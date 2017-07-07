@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C3006565-BA86-4BB0-A4A3-C029F997AB4F}</ProjectGuid>
+    <RootNamespace>Enn</RootNamespace>
+    <ProjectName>enn</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\..\bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\..\bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\include\pthread_win32;$(SolutionDir)..\..\include;$(SolutionDir)..\..\src\OIS\includes;$(SolutionDir)..\..\src\DirectXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;PTW32_STATIC_LIB;ENN_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib />
+    <Lib>
+      <AdditionalDependencies>d3dcompiler.lib;d3d11.lib;dinput8.lib;xinput.lib;dxguid.lib;winmm.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ENN_ROOT)\include\pthread_win32;$(ENN_ROOT)\src\DirectXTK\Inc;$(ENN_ROOT)\include;$(ENN_ROOT)\src\OIS\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;PTW32_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\include\pthread_win32;$(SolutionDir)..\..\include;$(SolutionDir)..\..\src\OIS\includes;$(SolutionDir)..\..\src\DirectXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;PTW32_STATIC_LIB;ENN_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>d3dcompiler.lib;d3d11.lib;dinput8.lib;xinput.lib;dxguid.lib;winmm.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\enn_animation.h" />
+    <ClInclude Include="..\..\include\enn_area_node.h" />
+    <ClInclude Include="..\..\include\enn_area_octree.h" />
+    <ClInclude Include="..\..\include\enn_auto_name_manager.h" />
+    <ClInclude Include="..\..\include\enn_axis_aligned_box.h" />
+    <ClInclude Include="..\..\include\enn_camera.h" />
+    <ClInclude Include="..\..\include\enn_camera_node.h" />
+    <ClInclude Include="..\..\include\enn_color.h" />
+    <ClInclude Include="..\..\include\enn_config.h" />
+    <ClInclude Include="..\..\include\enn_d3d11.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_element_format.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_gpu_buffer.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_gpu_program.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_gpu_resource.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_graphics_def.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_input_layout.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_render_device.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_render_state.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_render_target.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_render_view.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_render_window.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_resource_proxy.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_sprite_render.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_texture_obj.h" />
+    <ClInclude Include="..\..\include\enn_d3d11_viewport.h" />
+    <ClInclude Include="..\..\include\enn_deserializer.h" />
+    <ClInclude Include="..\..\include\enn_effect_template.h" />
+    <ClInclude Include="..\..\include\enn_effect_template_manager.h" />
+    <ClInclude Include="..\..\include\enn_environment.h" />
+    <ClInclude Include="..\..\include\enn_env_probe_node.h" />
+    <ClInclude Include="..\..\include\enn_file.h" />
+    <ClInclude Include="..\..\include\enn_file_system.h" />
+    <ClInclude Include="..\..\include\enn_flags.h" />
+    <ClInclude Include="..\..\include\enn_forward_effect_template.h" />
+    <ClInclude Include="..\..\include\enn_forward_pass.h" />
+    <ClInclude Include="..\..\include\enn_frustum.h" />
+    <ClInclude Include="..\..\include\enn_gbuffer_effect_template.h" />
+    <ClInclude Include="..\..\include\enn_gbuffer_pass.h" />
+    <ClInclude Include="..\..\include\enn_general_render.h" />
+    <ClInclude Include="..\..\include\enn_gpu_buffer.h" />
+    <ClInclude Include="..\..\include\enn_gpu_program.h" />
+    <ClInclude Include="..\..\include\enn_io_headers.h" />
+    <ClInclude Include="..\..\include\enn_iterator.h" />
+    <ClInclude Include="..\..\include\enn_light.h" />
+    <ClInclude Include="..\..\include\enn_light_buffer.h" />
+    <ClInclude Include="..\..\include\enn_light_buffer_effect_template.h" />
+    <ClInclude Include="..\..\include\enn_light_buffer_pass.h" />
+    <ClInclude Include="..\..\include\enn_light_node.h" />
+    <ClInclude Include="..\..\include\enn_light_render.h" />
+    <ClInclude Include="..\..\include\enn_main_result_effect_template.h" />
+    <ClInclude Include="..\..\include\enn_main_result_pass.h" />
+    <ClInclude Include="..\..\include\enn_material.h" />
+    <ClInclude Include="..\..\include\enn_material_manager.h" />
+    <ClInclude Include="..\..\include\enn_math.h" />
+    <ClInclude Include="..\..\include\enn_math_def.h" />
+    <ClInclude Include="..\..\include\enn_matrix3.h" />
+    <ClInclude Include="..\..\include\enn_matrix4.h" />
+    <ClInclude Include="..\..\include\enn_memory.h" />
+    <ClInclude Include="..\..\include\enn_memory_alloc.h" />
+    <ClInclude Include="..\..\include\enn_memory_buffer.h" />
+    <ClInclude Include="..\..\include\enn_memory_track.h" />
+    <ClInclude Include="..\..\include\enn_mesh.h" />
+    <ClInclude Include="..\..\include\enn_mesh_manager.h" />
+    <ClInclude Include="..\..\include\enn_mesh_manual_creator.h" />
+    <ClInclude Include="..\..\include\enn_mesh_node.h" />
+    <ClInclude Include="..\..\include\enn_msg_id.h" />
+    <ClInclude Include="..\..\include\enn_msg_queue.h" />
+    <ClInclude Include="..\..\include\enn_node.h" />
+    <ClInclude Include="..\..\include\enn_node_def.h" />
+    <ClInclude Include="..\..\include\enn_node_factory.h" />
+    <ClInclude Include="..\..\include\enn_noncopyable.h" />
+    <ClInclude Include="..\..\include\enn_object_aligned_box.h" />
+    <ClInclude Include="..\..\include\enn_object_recycle.h" />
+    <ClInclude Include="..\..\include\enn_octree.h" />
+    <ClInclude Include="..\..\include\enn_os_headers.h" />
+    <ClInclude Include="..\..\include\enn_pass_base.h" />
+    <ClInclude Include="..\..\include\enn_plane.h" />
+    <ClInclude Include="..\..\include\enn_plane_bounded_volume.h" />
+    <ClInclude Include="..\..\include\enn_platform.h" />
+    <ClInclude Include="..\..\include\enn_platform_headers.h" />
+    <ClInclude Include="..\..\include\enn_quaternion.h" />
+    <ClInclude Include="..\..\include\enn_ray.h" />
+    <ClInclude Include="..\..\include\enn_rect.h" />
+    <ClInclude Include="..\..\include\enn_renderable.h" />
+    <ClInclude Include="..\..\include\enn_render_parameter.h" />
+    <ClInclude Include="..\..\include\enn_render_pipe.h" />
+    <ClInclude Include="..\..\include\enn_render_setting.h" />
+    <ClInclude Include="..\..\include\enn_resource.h" />
+    <ClInclude Include="..\..\include\enn_resource_manager.h" />
+    <ClInclude Include="..\..\include\enn_res_ptr.h" />
+    <ClInclude Include="..\..\include\enn_root.h" />
+    <ClInclude Include="..\..\include\enn_rs_pool.h" />
+    <ClInclude Include="..\..\include\enn_rtti.h" />
+    <ClInclude Include="..\..\include\enn_scene_graph.h" />
+    <ClInclude Include="..\..\include\enn_scene_node.h" />
+    <ClInclude Include="..\..\include\enn_scene_object.h" />
+    <ClInclude Include="..\..\include\enn_serializer.h" />
+    <ClInclude Include="..\..\include\enn_shader_resource_parameter.h" />
+    <ClInclude Include="..\..\include\enn_shared_ptr.h" />
+    <ClInclude Include="..\..\include\enn_singleton.h" />
+    <ClInclude Include="..\..\include\enn_skeleton.h" />
+    <ClInclude Include="..\..\include\enn_sphere.h" />
+    <ClInclude Include="..\..\include\enn_ssao.h" />
+    <ClInclude Include="..\..\include\enn_ssao_effect_template.h" />
+    <ClInclude Include="..\..\include\enn_std_header.h" />
+    <ClInclude Include="..\..\include\enn_std_types.h" />
+    <ClInclude Include="..\..\include\enn_string_util.h" />
+    <ClInclude Include="..\..\include\enn_texture.h" />
+    <ClInclude Include="..\..\include\enn_texture_manager.h" />
+    <ClInclude Include="..\..\include\enn_thread.h" />
+    <ClInclude Include="..\..\include\enn_timer.h" />
+    <ClInclude Include="..\..\include\enn_vector2.h" />
+    <ClInclude Include="..\..\include\enn_vector3.h" />
+    <ClInclude Include="..\..\include\enn_vector4.h" />
+    <ClInclude Include="..\..\include\enn_viewport.h" />
+    <ClInclude Include="..\..\include\enn_work_queue.h" />
+    <ClInclude Include="..\..\include\enn_xml_element.h" />
+    <ClInclude Include="..\..\include\enn_xml_file.h" />
+    <ClInclude Include="..\..\include\pugiconfig.hpp" />
+    <ClInclude Include="..\..\include\pugixml.hpp" />
+    <ClInclude Include="..\..\include\sample_frame.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_element_format.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_input_layout.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_render_view.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_sprite_render.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_viewport.cpp" />
+    <ClCompile Include="..\..\src\image\decompress.cpp" />
+    <ClCompile Include="..\..\src\image\enn_image.cpp" />
+    <ClCompile Include="..\..\src\image\stb_image.c" />
+    <ClCompile Include="..\..\src\image\stb_image_write.c" />
+    <ClCompile Include="..\..\src\image\stb_vorbis.c" />
+    <ClCompile Include="..\..\src\io\enn_xml_element.cpp" />
+    <ClCompile Include="..\..\src\io\enn_xml_file.cpp" />
+    <ClCompile Include="..\..\src\io\pugixml.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\OISEffect.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\OISException.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\OISForceFeedback.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\OISInputManager.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\OISJoyStick.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\OISKeyboard.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\OISObject.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\win32\Win32ForceFeedback.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\win32\Win32InputManager.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\win32\Win32JoyStick.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\win32\Win32KeyBoard.cpp" />
+    <ClCompile Include="..\..\src\OIS\src\win32\Win32Mouse.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_partile_system.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_affector.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_affector_color.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_affector_force.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_affector_rotation.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_affector_rotation2.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_billboard.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_billboard_render.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_decal.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_decal_render.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_emitter.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_emitter_box.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_emitter_cylinder.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_emitter_ellipsoid.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_emitter_point.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_factory.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_render.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_ribbon_render.cpp" />
+    <ClCompile Include="..\..\src\particle\enn_ps_technique.cpp" />
+    <ClCompile Include="..\..\src\platform\enn_memory.cpp" />
+    <ClCompile Include="..\..\src\platform\enn_memory_alloc.cpp" />
+    <ClCompile Include="..\..\src\platform\enn_memory_track.cpp" />
+    <ClCompile Include="..\..\src\platform\enn_msg_queue.cpp" />
+    <ClCompile Include="..\..\src\platform\enn_object_recycle.cpp" />
+    <ClCompile Include="..\..\src\platform\enn_singleton.cpp" />
+    <ClCompile Include="..\..\src\platform\enn_thread.cpp" />
+    <ClCompile Include="..\..\src\platform\enn_timer.cpp" />
+    <ClCompile Include="..\..\src\platform\enn_work_queue.cpp" />
+    <ClCompile Include="..\..\src\platform\pthread_win32\pthread.c" />
+    <ClCompile Include="..\..\src\math\enn_axis_aligned_box.cpp" />
+    <ClCompile Include="..\..\src\math\enn_color.cpp" />
+    <ClCompile Include="..\..\src\math\enn_frustum.cpp" />
+    <ClCompile Include="..\..\src\math\enn_math_def.cpp" />
+    <ClCompile Include="..\..\src\math\enn_matrix3.cpp" />
+    <ClCompile Include="..\..\src\math\enn_matrix4.cpp" />
+    <ClCompile Include="..\..\src\math\enn_object_aligned_box.cpp" />
+    <ClCompile Include="..\..\src\math\enn_plane.cpp" />
+    <ClCompile Include="..\..\src\math\enn_plane_bounded_volume.cpp" />
+    <ClCompile Include="..\..\src\math\enn_quaternion.cpp" />
+    <ClCompile Include="..\..\src\math\enn_ray.cpp" />
+    <ClCompile Include="..\..\src\math\enn_rect.cpp" />
+    <ClCompile Include="..\..\src\math\enn_sphere.cpp" />
+    <ClCompile Include="..\..\src\math\enn_string_util.cpp" />
+    <ClCompile Include="..\..\src\math\enn_vector2.cpp" />
+    <ClCompile Include="..\..\src\math\enn_vector3.cpp" />
+    <ClCompile Include="..\..\src\math\enn_vector4.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_effect_template_manager.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_forward_effect_template.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_forward_pass.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_gbuffer_effect_template.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_gbuffer_pass.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_general_render.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_hdr_lighting.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_light_buffer_effect_template.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_light_buffer_pass.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_main_result_effect_template.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_ssao.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_ssao_effect_template.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_ssao_filter_effect_template.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_water_pass.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_environment.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_ocean.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_ocean_eff_template.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_perlin.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_projection_grid.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_sky.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_sky_effect_template.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_terrain.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_terrain_lod.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_terrain_section.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_terrain_section_eff_template.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_water.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_water_block.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_water_object.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\environment\enn_water_plane.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\render_parameter\enn_render_parameter.cpp" />
+    <ClCompile Include="..\..\src\resource\enn_mesh_manager.cpp" />
+    <ClCompile Include="..\..\src\resource\enn_texture.cpp" />
+    <ClCompile Include="..\..\src\resource\enn_texture_manager.cpp" />
+    <ClCompile Include="..\..\src\sample_frame\sample_frame.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_area_node.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_area_octree.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_camera.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_camera_node.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_env_probe_node.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_light.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_light_node.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_mesh_node.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_node.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_node_factory.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_octree.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_scene_graph.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_scene_node.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_viewport.cpp" />
+    <ClCompile Include="..\..\src\root\enn_root.cpp" />
+    <ClCompile Include="..\..\src\resource\enn_material.cpp" />
+    <ClCompile Include="..\..\src\resource\enn_material_manager.cpp" />
+    <ClCompile Include="..\..\src\resource\enn_mesh.cpp" />
+    <ClCompile Include="..\..\src\resource\enn_resource.cpp" />
+    <ClCompile Include="..\..\src\resource\enn_resource_manager.cpp" />
+    <ClCompile Include="..\..\src\io\enn_deserializer.cpp" />
+    <ClCompile Include="..\..\src\io\enn_file.cpp" />
+    <ClCompile Include="..\..\src\io\enn_file_system.cpp" />
+    <ClCompile Include="..\..\src\io\enn_memory_buffer.cpp" />
+    <ClCompile Include="..\..\src\io\enn_serializer.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_effect_template.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_main_result_pass.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_pass_base.cpp" />
+    <ClCompile Include="..\..\src\render_pipe\pass_system\enn_render_pipe.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_gpu_buffer.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_gpu_program.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_gpu_resource.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_render_device.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_render_state.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_render_target.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_render_window.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_resource_proxy.cpp" />
+    <ClCompile Include="..\..\src\d3d11_render_system\enn_d3d11_texture_obj.cpp" />
+    <ClCompile Include="..\..\src\scene\enn_water_node.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DirectXTex\DirectXTex\DirectXTex_Desktop_2015.vcxproj">
+      <Project>{371b9fa9-4c90-4ac6-a123-aced756d6c77}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\DirectXTK\DirectXTK_Desktop_2015.vcxproj">
+      <Project>{e0b52ae7-e160-4d32-bf3f-910b785e5a8e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

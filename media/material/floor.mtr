@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<material>
+	<tex_diff value="textures\sponza_floor_a_diff.tga" />
+	<clr_diffuse value="0.588 0.588 0.588 1" />
+	<en_lit value="true" />
+</material>

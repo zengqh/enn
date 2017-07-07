@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="basic">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="samples">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="samples\hello_sample">
+      <UniqueIdentifier>{01b1b80f-096b-4322-8862-a9808c6891a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>basic</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>basic</Filter>
+    </ClInclude>
+    <ClInclude Include="basic_demo.h">
+      <Filter>basic</Filter>
+    </ClInclude>
+    <ClInclude Include="hello_sample\hello_sample.h">
+      <Filter>samples\hello_sample</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="hello_sample\hello_sample.cpp">
+      <Filter>samples\hello_sample</Filter>
+    </ClCompile>
+    <ClCompile Include="basic_demo.cpp">
+      <Filter>basic</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>basic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="basic_demo.ico">
+      <Filter>basic</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>basic</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="basic_demo.rc">
+      <Filter>basic</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
